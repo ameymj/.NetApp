@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<hr />
+<h4>Enter your Details</h4>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <p> <label>User Name</label> <input type="text" name="username" required /></p>
+    <p> <label>Password</label> <input type="password" name="password" required /></p>
+    <input type="submit" value="login" />
+}

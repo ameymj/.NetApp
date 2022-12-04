@@ -1,0 +1,22 @@
+﻿@using ExamApp.Models;
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+@{
+    Workshop item = ViewBag.workshop;
+    <fieldset>
+        <center>
+            <h2>Update Workshop</h2>
+            <form action="~/Workshop/Edit" method="post">
+                <b>Id</b><input type="number" name="id" value=@item.Id readonly /><br /><br />
+                <b>Enter Topic</b> <input type="text" name="topic" value=@item.Topic /><br /><br />
+                <b>Description</b> <input type="text" name="desc" value=@item.Description /><br /><br />
+                <b>Enter Presenter</b> <input type="text" name="present" value=@item.Faculty /><br /><br />
+                <b>Enter Location</b> <input type="text" name="location" value=@item.Location /><br /><br />
+                <input type="submit" value="Update Workshop" />
+            </form>
+        </center>
+    </fieldset>
+}

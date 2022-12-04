@@ -1,0 +1,18 @@
+﻿@using ExamApp.Models;
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@{
+    Workshop workshop = ViewBag.workshop;
+    <ol>
+        <li>@workshop.Id</li>
+        <li>@workshop.Topic</li>
+        <li>@workshop.Description</li>
+        <li>@workshop.Faculty</li>
+        <li>@workshop.Location</li>
+    </ol>
+}
+<h4><a href="~/Workshop/Index">back to list</a></h4>

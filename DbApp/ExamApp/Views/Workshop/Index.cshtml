@@ -1,0 +1,43 @@
+﻿@using ExamApp.Models
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    table {
+        border: 1px solid black;
+        width: 100%;
+    }
+</style>
+
+@{
+    List<Workshop> workshops = ViewBag.list;
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Topic</th>
+            <th>Description</th>
+            <th>Faculty Name</th>
+            <th>Location</th>
+        </tr>
+
+        @foreach (var item in workshops)
+        {
+            <tr>
+                <td>@item.Id</td>
+                
+                <td>@item.Topic</td>
+                <td>@item.Description</td>
+                <td>@item.Faculty</td>
+                <td>@item.Location</td>
+                <td><a href="~/Workshop/Edit/@item.Id">| Edit |</a></td>
+                <td><a href="~/Workshop/Delete/@item.Id">| Delete |</a></td>
+
+
+            </tr>
+
+        }
+    </table>
+}
+<h4><a href="~/Workshop/Create">Add Workshop</a></h4>
